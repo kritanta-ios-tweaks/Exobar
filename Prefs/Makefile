@@ -1,10 +1,12 @@
 ARCHS = arm64 arm64e
-TARGET = iphone:clang:11.2
+# TARGET = iphone:clang:11.2:11.2
+
+SYSROOT = $(THEOS)/sdks/iPhoneOS11.2.sdk
 
 include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = ExobarPrefs
-$(BUNDLE_NAME)_FILES = Preferences.m Themes.m ../EXBTheme.m
+$(BUNDLE_NAME)_FILES = Preferences.m Themes.m ../EXBTheme.m KRTwitterCell.m KRLinkTableCell.m
 $(BUNDLE_NAME)_INSTALL_PATH = /Library/PreferenceBundles
 $(BUNDLE_NAME)_FRAMEWORKS = UIKit
 $(BUNDLE_NAME)_PRIVATE_FRAMEWORKS = Preferences
